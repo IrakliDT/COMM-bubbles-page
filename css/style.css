@@ -1,0 +1,852 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Poppins:wght@200&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: #000;
+  background-image: url(/imgs/Blurbg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+}
+
+.nav-link {
+  font-weight: 1000;
+  font-size: 20px;
+  margin-right: 2rem;
+}
+.comm{
+  font-size: 40px;
+  font-weight: 1000;
+}
+.logo img{
+  width: 50px;
+}
+.logo img:hover{
+  transform: rotate(360deg);
+  transition: all 2s;
+}
+
+.arrow-img {
+  
+  margin-right: 3rem;
+  margin-left: -1.5rem;
+}
+
+.arrow-img:hover {
+  transform: rotate(180deg);
+  transition: all 0.5s ease;
+}
+
+.dropdown-EN {
+  list-style: none;
+}
+
+.dropdown-EN:hover .menu-dropdown_item {
+  opacity: 1;
+  visibility: visible;
+
+  transition: all 0.5s ease;
+}
+
+.menu-dropdown {
+  position: absolute;
+  height: 200px;
+  top: 15%;
+  right: 21.2%;
+  bottom: 0;
+
+  list-style: none;
+}
+
+.menu-dropdown_item a {
+  color: white;
+}
+
+.menu-dropdown_item {
+  opacity: 0;
+  visibility: hidden;
+}
+
+
+/* =========================== button =========================== */
+
+:root {
+  --text-color: hsla(210, 50%, 85%, 1);
+  --shadow-color: hsla(210, 4%, 91%, 0.4);
+  --btn-color: hsl(279, 94%, 27%);
+  --bg-color: #000000;
+}
+
+button {
+  position: relative;
+  padding: 10px 20px;
+  border: none;
+  background: none;
+  cursor: pointer;
+
+
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 20px;
+  color: var(--text-color);
+
+  background-color: var(--btn-color);
+  box-shadow: var(--shadow-color) 2px 2px 22px;
+  border-radius: 4px;
+  z-index: 0;
+  overflow: hidden;
+}
+
+button:focus {
+  outline-color: transparent;
+  box-shadow: var(--btn-color) 2px 2px 22px;
+}
+
+.right::after,
+button::after {
+  content: var(--content);
+  display: block;
+  position: absolute;
+  white-space: nowrap;
+  padding: 40px 40px;
+  pointer-events: none;
+}
+
+button::after {
+  font-weight: 200;
+  top: -30px;
+  left: -20px;
+}
+
+.right,
+.left {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+.right {
+  left: 66%;
+}
+
+.left {
+  right: 66%;
+}
+
+.right::after {
+  top: -30px;
+  left: calc(-66% - 20px);
+
+  background-color: var(--bg-color);
+  color: transparent;
+  transition: transform .4s ease-out;
+  transform: translate(0, -90%) rotate(0deg)
+}
+
+button:hover .right::after {
+  transform: translate(0, -47%) rotate(0deg)
+}
+
+button .right:hover::after {
+  transform: translate(0, -50%) rotate(-7deg)
+}
+
+button .left:hover~.right::after {
+  transform: translate(0, -50%) rotate(7deg)
+}
+
+button::before {
+  content: '';
+  pointer-events: none;
+  opacity: .6;
+  background:
+    radial-gradient(circle at 20% 35%, transparent 0, transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
+    radial-gradient(circle at 75% 44%, transparent 0, transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
+    radial-gradient(circle at 46% 52%, transparent 0, transparent 4px, var(--text-color) 5px, var(--text-color) 6px, transparent 6px);
+
+  width: 100%;
+  height: 300%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  animation: bubbles 5s linear infinite both;
+}
+
+@keyframes bubbles {
+  from {
+    transform: translate();
+  }
+
+  to {
+    transform: translate(0, -66.666%);
+  }
+}
+
+
+/* ========================== SECTION TEXT ============================ */
+section {
+  height: 70vh;
+}
+
+.title {
+  margin: 170px 290px 0 0;
+}
+
+section h1 {
+  height: 150px;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 102px;
+  line-height: 121px;
+}
+
+.simple {
+  margin-left: 8%;
+}
+
+section span {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 128px;
+  line-height: 121px;
+}
+
+section p {
+  margin-left: -4%;
+
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 30px;
+  text-align: center;
+}
+
+#blobCursor {
+  position: absolute;
+  bottom: 0;
+  top: 26%;
+  right: 0;
+  left: 19%;
+  transition-duration: 2s;
+  transition-timing-function: ease-auto;
+}
+
+.btn-link {
+  border-radius: 30px;
+  padding: 14px 34px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.bttn-green {
+  background-color: #0D966F;
+}
+
+.btn-follow {
+  margin-right: 6%;
+}
+
+.btn-follow img {
+  position: absolute;
+  margin-top: 1%;
+  margin-left: 3.5%;
+}
+
+.btn-follow button {
+  margin-left: 10%;
+  width: 180px;
+  padding-left: 40%;
+}
+
+.goldstar {
+  position: absolute;
+  top: 87.7%;
+  bottom: 0;
+  right: 0;
+  left: 38%;
+}
+
+.goldstar:hover {
+  transform: rotate(360deg);
+  transition: 2s;
+}
+
+.tleft-purple {
+  position: absolute;
+  top: 22%;
+  bottom: 0;
+  right: 0;
+  left: 8%;
+}
+.tleft-purple:hover {
+  transform: rotate(360deg);
+  transition: 2s;
+}
+
+.middle-yellow {
+  width: 10%;
+  height: 10%;
+  position: absolute;
+  top: 10%;
+  bottom: 0;
+  right: 0;
+  left: 46%;
+}
+
+/* ========================== BUBBLES ============================ */
+.bubbles-inn {
+  position: absolute;
+  width: 5%;
+  top: 80%;
+  left: 10%;
+  right: 0;
+}
+
+.bubble {
+  --bubbleTiming: cubic-bezier(0.5, 0.15, 0.25, 1.75);
+  font-size: calc(4px + (60 - 40) * (100vw - 320px) / (1280 - 320));
+}
+
+.bubles-yellow {
+  --bubbleTiming: cubic-bezier(0.5, 0.15, 0.25, 1.75);
+  font-size: calc(2px + (60 - 40) * (70vw - 320px) / (1280 - 320));
+}
+
+.bubble-ontitle {
+  --bubbleTiming: cubic-bezier(0.5, 0.15, 0.25, 1.75);
+  font-size: calc(50px + (60 - 40) * (100vw - 320px) / (1280 - 320));
+}
+
+.ryellow {
+  --bubbleTiming: cubic-bezier(0.5, 0.15, 0.25, 1.75);
+  font-size: calc(35px + (60 - 40) * (100vw - 320px) / (1280 - 320));
+}
+
+
+label,
+.bubble {
+  display: block;
+  -webkit-tap-highlight-color: transparent;
+}
+
+label {
+  animation: float 4s ease-in-out infinite;
+}
+
+.bubble,
+.bubble:before,
+.bubble:after {
+  transition-duration: 0.2s;
+}
+
+.bubble,
+.bubble:after {
+  border-radius: 50%;
+}
+
+.bubble {
+  background-image:
+    radial-gradient(8% 8% at 22% 28%, hsl(0, 0%, 100%) 45%, hsla(0, 0%, 100%, 0) 50%),
+    radial-gradient(8% 8% at 23% 27%, hsl(0, 0%, 100%) 45%, hsla(0, 0%, 100%, 0) 50%),
+    radial-gradient(8% 8% at 24% 26%, hsl(0, 0%, 100%) 45%, hsla(0, 0%, 100%, 0) 50%),
+    radial-gradient(8% 8% at 25% 25%, hsl(0, 0%, 100%) 45%, hsla(0, 0%, 100%, 0) 50%),
+    radial-gradient(8% 8% at 26% 24%, hsl(0, 0%, 100%) 45%, hsla(0, 0%, 100%, 0) 50%),
+    radial-gradient(8% 8% at 27% 23%, hsl(0, 0%, 100%) 45%, hsla(0, 0%, 100%, 0) 50%),
+    radial-gradient(8% 8% at 28% 22%, hsl(0, 0%, 100%) 45%, hsla(0, 0%, 100%, 0) 50%);
+  box-shadow:
+    0 -0.06em 0.1em hsl(120, 90%, 100%) inset,
+    0 -0.15em 0.4em hsl(278, 90%, 45%) inset,
+    0 0.05em 0.05em hsl(275, 90%, 45%) inset,
+    0.05em 0 0.1em hsl(120, 90%, 100%) inset,
+    -0.05em 0 0.1em hsl(120, 90%, 100%) inset,
+    0 0.1em 0.4em hsl(282, 90%, 60%) inset;
+  cursor: pointer;
+  position: relative;
+  width: 3em;
+  height: 3em;
+  transform-style: preserve-3d;
+  transition-property: box-shadow, transform, width, height;
+  transition-timing-function: ease-in-out, ease-in-out, var(--bubbleTiming), var(--bubbleTiming);
+  will-change: transform;
+  -webkit-appearance: none;
+  appearance: none;
+  z-index: ;
+}
+
+.ryellow {
+  box-shadow:
+    0 -0.06em 0.1em hsl(120, 90%, 100%) inset,
+    0 -0.15em 0.4em hsl(125, 90%, 16%) inset,
+    0 0.05em 0.05em hsl(141, 88%, 16%) inset,
+    0.05em 0 0.1em hsl(120, 90%, 100%) inset,
+    -0.05em 0 0.1em hsl(120, 90%, 100%) inset,
+    0 0.1em 0.4em hsl(137, 89%, 10%) inset;
+}
+
+.bubble:before {
+  border-radius: 0.75em;
+  box-shadow:
+    0 0 0 0.5em hsl(0, 0%, 100%) inset;
+  filter: drop-shadow(0.6em 0.6em 4px hsla(0, 0%, 0%, 0.2));
+  top: 50%;
+  left: 50%;
+  width: 1.5em;
+  height: 1.5em;
+  transform: translate3d(-50%, -50%, -1px);
+  z-index: -1;
+}
+
+.bubble:after {
+  background:
+    radial-gradient(100% 100% at center, hsla(0, 0%, 0%, 0) 35%, hsla(0, 0%, 0%, 0.2) 48%, hsla(0, 0%, 0%, 0) 50%);
+  filter: blur(4px);
+  top: 0.6em;
+  left: 0.6em;
+  width: 100%;
+  height: 100%;
+  transform: translate3d(0, 0, -1px);
+  z-index: -2;
+}
+
+.bubble:focus,
+.bubble:hover {
+  transform: scale(1.1);
+  outline: none;
+}
+
+.bubble:focus:active,
+.bubble:hover:active {
+  width: 3.6em;
+  height: 2.4em;
+  transition: all .3s;
+}
+
+.bubble:focus:before,
+.bubble:hover:before {
+  filter: drop-shadow(0.75em 0.75em 4px hsla(0, 0%, 0%, 0.2));
+}
+
+.bubble:focus:after,
+.bubble:hover:after {
+  transform: translate3d(0.15em, 0.15em, -1px);
+}
+
+.bubble:checked:before {
+  border-radius: 0.25em;
+  width: 0.5em;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+    transform: translate3d(1, 1, 1) rotateZ(0.01deg);
+  }
+
+  34% {
+    border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%;
+    transform: translate3d(0, 5px, 0) rotateZ(0.01deg);
+  }
+
+  50% {
+    opacity: .89;
+    transform: translate3d(0, 0, 0) rotateZ(0.01deg);
+  }
+
+  67% {
+    border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+    transform: translate3d(0, -3px, 0) rotateZ(0.01deg);
+  }
+}
+
+.b-left-purple {
+  position: absolute;
+  top: 14%;
+  left: 0.8rem;
+}
+
+.myellow {
+  position: absolute;
+  top: 14%;
+  left: 8%;
+}
+
+.right-purple {
+  position: absolute;
+  top: 24%;
+  left: 85%;
+}
+
+.right-yellow {
+  position: absolute;
+  top: 70%;
+  bottom: 0;
+  left: 86%;
+  right: 0;
+}
+
+.img-yellow {
+  position: absolute;
+  top: 24%;
+  left: 28%
+}
+
+/* =================================== HAMBURGER MENU =================================== */
+.hamburger {
+  display: none;
+}
+
+.hamburger {
+  position: absolute;
+  top: 3em;
+  right: 5%;
+  margin-left: -2em;
+  margin-top: -45px;
+  width: 2em;
+  height: 45px;
+  z-index: 5;
+}
+
+.hamburger div {
+  position: relative;
+  width: 2em;
+  height: 5px;
+  border-radius: 3px;
+  background-color: #6707ba;
+  margin-top: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+
+/* =================================== RESPONSIVE =================================== */
+
+@media screen and (min-width: 1600px){
+  section h1 {
+    font-size: 150px;
+    height: 10vh;
+  }
+
+  section span {
+    font-size: 200px;
+  }
+
+  section p {
+    font-size: 26px;
+    margin: 0 auto;
+  }
+
+  .title {
+    margin: 0 auto;
+    margin-top: 30%;
+  }
+  .btn-link {
+    margin-right: 3%;
+    margin-top: 5%;
+    padding: 25px;
+    font-size: 28px;
+  }
+
+  .btn-follow {
+    margin-top: 5%;
+    padding: 0;
+    font-size: 8px;
+  }
+
+  .btn-follow button {
+    margin: 0 auto;
+    width: 220px;
+  }
+
+  .btn-follow img {
+    margin-top: 1%;
+    margin-left: 2%;
+    width: 2%;
+  }
+  #blobCursor {
+    width: 10px;
+    height: 10px;
+  }
+  .goldstar {
+    width: 2.5%;
+    left: 38%;
+  }
+  .right-yellow {
+    left: 80%;
+  }
+
+  .img-yellow {
+    left: 20px;
+    top: 10%;
+    width: 20%;
+  }
+
+  .right-purple {
+    left: 76%;
+    top: 15%;
+    width: 15%;
+  }
+  .b-left-purple {
+    width: 100%;
+  }
+
+  .myellow {
+    width: 60%;
+    top: 6%;
+  }
+  .img-yellow{
+    width: 40%;
+  }
+
+  .goldstar {
+    top: 58%;
+    width: 3%;
+    left: 38%;
+  }
+  .arrow-img, .menu-dropdown_item a, .menu-dropdown_itemEN{
+    display:none;
+  }
+  .bubble {
+    font-size: calc(20px + (60 - 40) * (100vw - 320px) / (1280 - 320));
+  }
+
+  .bubble-ontitle {
+    font-size: calc(90px + (60 - 40) * (100vw - 320px) / (1280 - 320));
+  }
+
+  .ryellow {
+    font-size: calc(40px + (60 - 40) * (100vw - 320px) / (1280 - 320));
+  }
+  
+
+}
+
+  
+
+@media screen and (max-width: 992px) {
+  section h1 {
+    font-size: 55px;
+    height: 10vh;
+  }
+
+  section span {
+    font-size: 80px;
+  }
+
+  section p {
+    font-size: 10px;
+    margin: 0 auto;
+  }
+
+  .title {
+    margin: 0 auto;
+    margin-top: 16%;
+  }
+
+  .simple {
+    margin-left: 4%;
+  }
+
+  .btn-link {
+    padding: 0 5px;
+    font-size: 8px;
+  }
+
+  .btn-follow {
+    padding: 0;
+    font-size: 8px;
+  }
+
+  .btn-follow button {
+    margin: 0 auto;
+    width: 70px;
+  }
+
+  .btn-follow img {
+    margin-top: 1%;
+    margin-left: 2%;
+    width: 2%;
+  }
+
+  #blobCursor {
+    width: 10px;
+    height: 10px;
+  }
+
+  .right-yellow {
+    left: 80%;
+  }
+
+  .img-yellow {
+    left: 20px;
+    top: 10%;
+    width: 20%;
+  }
+
+  .right-purple {
+    left: 80%;
+    top: 15%;
+    width: 10%;
+  }
+  .b-left-purple {
+    width: 60%;
+  }
+
+  .myellow {
+    width: 15%;
+    top: 6%;
+  }
+
+  .goldstar {
+    top: 63.5%;
+    width: 2%;
+    left: 39%;
+  }
+  .arrow-img, .menu-dropdown_item a, .menu-dropdown_itemEN{
+    display:none;
+  }
+
+  .bubble-ontitle {
+    font-size: calc(24px + (60 - 40) * (100vw - 320px) / (1280 - 320));
+  }
+
+  .ryellow {
+    font-size: calc(15px + (60 - 40) * (100vw - 320px) / (1280 - 320));
+  }
+
+}
+
+
+@media screen and (max-width: 767px) {
+  section h1 {
+    font-size: 50px;
+    height: 6vh;
+  }
+
+  section span {
+    font-size: 60px;
+  }
+
+  section p {
+    font-size: 12px;
+    margin: 0 auto;
+  }
+
+  .title {
+    margin-left: 22%;
+    margin-top: 16%;
+  }
+
+  .simple {
+    margin-left: -1%;
+  }
+  .text{
+    margin-top: 8%;
+    width: 50%;
+  }
+  .link{
+    padding-top: 3%;
+    padding-left: 35%;
+  }
+  .goldstar {
+    width: 2%;
+    left: 35%;
+  } 
+  #blobCursor {
+    top: 23%;
+  } 
+  .bubble-ontitle {
+    font-size: calc(20px + (60 - 40) * (100vw - 320px) / (1280 - 320));
+  }
+
+}
+
+
+
+@media screen and (max-width: 576px) {
+  button{
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+  #blobCursor {
+    top: 20%;
+  } 
+  section h1 {
+    font-size: 26px;
+    height: 5vh;
+  }
+
+  section span {
+    font-size: 40px;
+  }
+
+  section p {
+    font-size: 10px;
+    margin: 0 auto;
+  }
+
+  .title {
+    margin-left: 26%;
+    margin-top: 20%;
+  }
+  .link{
+    padding-top: 3%;
+    padding-left: 33%;
+  }
+  .btn-link {
+    padding: 0 3px;
+    font-size: 6px;
+  }
+
+  .btn-follow {
+    padding: 0;
+    font-size: 4px;
+  }
+
+  .btn-follow button {
+    margin: 0 auto;
+    width: 60px;
+  }
+  .btn-follow img {
+    margin-top: 2%;
+    margin-left: 2%;
+    width: 3%;
+  }
+  .tleft-purple{
+    width: 10%;
+  }
+  .b-left-purple{
+    left: 0.2rem;
+  }
+  .goldstar {
+    top: 60%;
+    width: 2%;
+    left: 34%;
+  }
+  .comm{
+    font-size: 30px;
+    font-weight: 1000;
+  }
+  .logo img{
+    width: 30px;
+  }
+}
