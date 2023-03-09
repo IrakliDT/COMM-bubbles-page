@@ -1,7 +1,7 @@
 // mouse cursor
 
 const blobCursor = document.querySelector('#blobCursor');
-var timeout;
+// var timeout;
 
 
 document.addEventListener('mousemove', (e) => {
@@ -11,6 +11,13 @@ document.addEventListener('mousemove', (e) => {
 
     blobCursor.style.top = y + "px"
     blobCursor.style.left = x + "px"
+
+
+    // blobCursor.style.top = (e.pageY -50) + "px"
+    // blobCursor.style.left = (e.pageX -50) + "px"
+    
+    blobCursor.style.display = "block"
+    
 
 })
 
